@@ -6,7 +6,7 @@ Instead of your main program deciding the type of object, the factory does the j
 
 # UML Diagram
 
-![SimpleFactory][simplefactorydesign.png]
+<img width="3629" height="1631" alt="Image" src="https://github.com/user-attachments/assets/4cfa429d-c701-4c96-9858-2570666995eb" />
 
 ### It’s like ordering a burger at a counter:
 
