@@ -4,6 +4,10 @@
 The Simple Factory is a design pattern where you use a single class (the factory) to decide which object to create.
 Instead of your main program deciding the type of object, the factory does the job for you.
 
+# UML Diagram
+
+![SimpleFactory][simplefactorydesign.png]
+
 ### It’s like ordering a burger at a counter:
 
 - You say **basic** → the kitchen gives you a Basic Burger
@@ -25,3 +29,5 @@ Each one prepares itself differently.
 
 - #### BurgerFactory
 This class creates the right burger based on the input (e.g., "basic", "premium").
+
+[def]: simple
