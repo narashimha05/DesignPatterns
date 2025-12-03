@@ -1,33 +1,33 @@
 
-# Simple Factory Design Pattern
+# Factory Method Pattern
 
-The Simple Factory is a design pattern where you use a single class (the factory) to decide which object to create.
-Instead of your main program deciding the type of object, the factory does the job for you.
+The Factory Method is a creational design pattern where the process of creating objects is delegated to subclasses.
+Instead of having one central factory that creates all products, each subclass (or factory implementation) decides which concrete product to create.
 
 # UML Diagram
 
-![SimpleFactory][simplefactorydesign.png]
+<img width="5423" height="2694" alt="Image" src="https://github.com/user-attachments/assets/808a2078-465c-4915-9caa-60c641e9f5f1" />
 
-### It’s like ordering a burger at a counter:
+- It’s like ordering a burger from two different shops:
 
-- You say **basic** → the kitchen gives you a Basic Burger
+- SinghBurger Factory → gives you regular burgers (basic, standard, premium)
 
-- You say **standard** → the kitchen gives you a standard Burger
+- KingBurger Factory → gives you wheat burgers (basic wheat, standard wheat, premium wheat)
 
-- You say **premium** → you get a Premium Burger
-
-- You don’t make it yourself — the **factory** handles it.
+- You ask for the same “type” (basic/standard/premium), but different factories give you different versions of that burger.
 
 ## What the diagram shows:
 
 - #### Burger (abstract class)
-A general “burger blueprint.” It only says that all burgers must have a prepare() function.
+A general "burger blueprint". All burgers must implement a prepare() function, but the details differ.
 
 - #### BasicBurger / StandardBurger / PremiumBurger
-These are the actual burger types created from the blueprint.
-Each one prepares itself differently.
+Concrete burger types created by the SinghBurger factory.
 
-- #### BurgerFactory
-This class creates the right burger based on the input (e.g., "basic", "premium").
+- #### BasicWheatBurger / StandardWheatBurger / PremiumWheatBurger
+Concrete wheat-based burgers created by the KingBurger factory.
+
+- #### BurgerFactory (abstract factory class)
+Declares the function CreateBurger(type). It does not decide what burger to create — it leaves that choice to subclasses.
 
 [def]: simple
